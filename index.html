@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mesquite Event Center | Weddings, Quinceañeras & Corporate Events in Mesquite, TX</title>
-<meta name="description" content="Mesquite Event Center hosts weddings, quinceañeras, corporate events, and celebrations at 4601 Gus Thomasson Rd, Mesquite, TX. Call 214-699-9868 to book.">
+<title>Mesquite Event Center | Live Stage Productions & Events in Mesquite, TX</title>
+<meta name="description" content="Mesquite Event Center presents live on-stage productions and hosts weddings, quinceañeras, and corporate events at 4601 Gus Thomasson Rd, Mesquite, TX. Call 214-699-9868.">
 <style>
-  :root{--ink:#2a2233;--plum:#5b2a6e;--plum-deep:#3a1a49;--gold:#c9a24b;--cream:#faf6f0;--soft:#f1e8f4}
+  :root{--ink:#2a2233;--plum:#5b2a6e;--plum-deep:#3a1a49;--gold:#c9a24b;--cream:#faf6f0;--soft:#f1e8f4;--marquee:#22112e}
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--cream);line-height:1.7}
@@ -34,10 +34,23 @@
   .card h3{color:var(--plum);font-size:1.15rem;font-weight:400;margin-bottom:8px}
   .card p{font-size:.93rem;color:#6d6076}
 
+  .marquee{background:var(--marquee);color:#fff;text-align:center;position:relative;overflow:hidden}
+  .marquee .kicker{color:var(--gold)}
+  .marquee h2{color:#fff}
+  .marquee::before,.marquee::after{content:"★ ★ ★";position:absolute;top:50%;transform:translateY(-50%);color:rgba(201,162,75,.35);letter-spacing:10px;font-size:.8rem}
+  .marquee::before{left:14px}.marquee::after{right:14px}
+  .show-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:40px;max-width:900px;margin-left:auto;margin-right:auto}
+  .show{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.35)}
+  .show .poster{background:linear-gradient(150deg,#6d3a84,#41204f);min-height:160px;display:flex;align-items:center;justify-content:center;color:#e9d8f2;font-family:Georgia,serif;font-style:italic;font-size:1.1rem;text-align:center;padding:12px}
+  .show .info{padding:18px 20px}
+  .show .info h3{color:var(--ink);font-size:1.05rem;font-weight:400}
+  .show .info p{font-size:.85rem;color:#6d6076;margin:4px 0 10px}
+  .show .info a{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .demo-note{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.75rem;color:#a094a8;text-align:center;max-width:640px;margin:26px auto 0;font-style:italic}
+
   .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
   .gcell{background:linear-gradient(150deg,#efe6f3,#d8c6e4);border-radius:8px;min-height:200px;display:flex;align-items:center;justify-content:center;color:#7a5d8c;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:10px}
   .gcell.tall{min-height:250px}
-  .demo-note{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.75rem;color:#a094a8;text-align:center;max-width:640px;margin:26px auto 0;font-style:italic}
 
   .amen{background:var(--soft)}
   .amen ul{list-style:none;columns:2;margin-top:20px}
@@ -69,7 +82,7 @@
 
   footer{padding:26px 0;color:#8a7d92;font-size:.85rem;text-align:center;background:var(--cream)}
   footer a{color:var(--plum)}
-  @media(max-width:700px){.amen ul{columns:1}.gallery{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}}
+  @media(max-width:700px){.amen ul{columns:1}.gallery{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.marquee::before,.marquee::after{display:none}}
 </style>
 </head>
 <body>
@@ -77,28 +90,41 @@
 <header>
   <div class="wrap bar">
     <div class="logo">Mesquite Event Center<small>Mesquite, Texas</small></div>
-    <nav class="navlinks"><a href="#events">Events</a><a href="#gallery">Gallery</a><a href="#packages">Packages</a><a href="#faq">FAQ</a><a href="#book">Book</a></nav>
+    <nav class="navlinks"><a href="#shows">Now Playing</a><a href="#events">Events</a><a href="#gallery">Gallery</a><a href="#packages">Rentals</a><a href="#faq">FAQ</a><a href="#book">Book</a></nav>
   </div>
 </header>
 
 <div class="hero">
   <div class="wrap">
-    <div class="kicker" style="color:#c9a24b">Your Celebration Starts Here</div>
-    <h1>The perfect space for <em>your</em> next event.</h1>
-    <p>Weddings, quinceañeras, corporate gatherings, birthdays, and milestone celebrations, hosted with care in the heart of Mesquite. Flexible layouts, full amenities, and a team that treats your event like our own.</p>
-    <a class="btn" href="#book">Book Your Date</a>
+    <div class="kicker" style="color:#c9a24b">The Stage Is Set</div>
+    <h1>Live theater in the heart of <em>Mesquite.</em></h1>
+    <p>Full-scale on-stage productions, Broadway-style, brought to life in Mesquite, plus the area's most flexible hall for weddings, quinceañeras, and celebrations.</p>
+    <a class="btn" href="#shows">See What's On Stage</a>
   </div>
 </div>
 
+<section class="marquee" id="shows">
+  <div class="wrap">
+    <div class="kicker">Live On Stage</div>
+    <h2>Now playing &amp; coming soon.</h2>
+    <div class="show-grid">
+      <div class="show"><div class="poster">Show poster</div><div class="info"><h3>Current Production</h3><p>Showtimes, dates and cast</p><a href="#book">Call for tickets: 214-699-9868</a></div></div>
+      <div class="show"><div class="poster">Show poster</div><div class="info"><h3>Next Production</h3><p>Opening dates &amp; announcements</p><a href="#book">Call for tickets: 214-699-9868</a></div></div>
+      <div class="show"><div class="poster">Auditions notice</div><div class="info"><h3>Join the Cast</h3><p>Audition dates for local performers</p><a href="#book">Call to sign up: 214-699-9868</a></div></div>
+    </div>
+    <p class="demo-note">Sample layout for demo purposes — show posters, dates and ticket details update with the venue's real production calendar at launch.</p>
+  </div>
+</section>
+
 <section id="events">
   <div class="wrap">
-    <div class="kicker">What We Host</div>
-    <h2>Every occasion, done right.</h2>
+    <div class="kicker">One Stage, Many Nights</div>
+    <h2>Live productions &amp; every occasion.</h2>
     <div class="grid">
+      <div class="card"><h3>Live Stage Productions</h3><p>Full-scale plays and musicals, produced and performed right here in Mesquite, with local cast and crew.</p></div>
       <div class="card"><h3>Weddings &amp; Receptions</h3><p>From intimate ceremonies to full receptions, with room for your guest list, your caterer, and your dance floor.</p></div>
-      <div class="card"><h3>Quinceañeras</h3><p>A beautiful setting for a beautiful tradition. Space for court, dining, and celebration into the night.</p></div>
+      <div class="card"><h3>Quinceañeras</h3><p>A grand setting for a beautiful tradition. Space for court, dining, and celebration into the night.</p></div>
       <div class="card"><h3>Corporate &amp; Community</h3><p>Meetings, banquets, fundraisers, and church events with flexible setup and easy access from anywhere in Dallas County.</p></div>
-      <div class="card"><h3>Birthdays &amp; Milestones</h3><p>Sweet sixteens, anniversaries, family reunions, graduation parties. Bring the people, we'll bring the space.</p></div>
     </div>
   </div>
 </section>
@@ -108,11 +134,11 @@
     <div class="kicker">The Venue, In Pictures</div>
     <h2>Gallery.</h2>
     <div class="gallery">
-      <div class="gcell tall">Main hall, set for dinner</div>
-      <div class="gcell tall">Stage and dance floor</div>
-      <div class="gcell tall">Head table detail</div>
-      <div class="gcell">Ceremony layout</div>
-      <div class="gcell">Guest tables</div>
+      <div class="gcell tall">The stage, lit for opening night</div>
+      <div class="gcell tall">Audience seating</div>
+      <div class="gcell tall">Cast in costume</div>
+      <div class="gcell">Hall set for a reception</div>
+      <div class="gcell">Head table detail</div>
       <div class="gcell">Decorated for a quinceañera</div>
     </div>
     <p class="demo-note">Sample layout for demo purposes — every slot updates with the venue's real photography at launch.</p>
@@ -122,16 +148,16 @@
 <section class="amen" id="amenities">
   <div class="wrap">
     <div class="kicker">The Space</div>
-    <h2>Everything your event needs.</h2>
+    <h2>A real stage. A full house.</h2>
     <ul>
+      <li>Raised stage with theatrical lighting</li>
+      <li>House sound for shows, speeches and music</li>
+      <li>Seating for audiences and banquet guests</li>
       <li>Flexible floor plans for any guest count</li>
-      <li>Tables and chairs included with rental</li>
-      <li>Stage and A/V-ready setup for music and speeches</li>
+      <li>Tables and chairs included with rentals</li>
       <li>Kitchen area for your caterer</li>
       <li>Ample free parking for your guests</li>
       <li>Convenient location on Gus Thomasson Rd</li>
-      <li>Clean, well-lit, modern interior</li>
-      <li>Friendly staff to help your day run smooth</li>
     </ul>
   </div>
 </section>
@@ -139,11 +165,11 @@
 <section class="amen" id="packages">
   <div class="wrap">
     <div class="kicker">Simple, Honest Options</div>
-    <h2>Packages.</h2>
+    <h2>Book the house.</h2>
     <p style="max-width:640px;color:#6d6076">Every event is different, so every package flexes. These are popular starting points we customize together.</p>
     <div class="grid">
-      <div class="pkg"><h3>Full Celebration</h3><p class="for">Weddings &amp; Quinceañeras</p><ul><li>Full-day exclusive use of the hall</li><li>Ceremony set-up and reception flip</li><li>Tables and chairs included</li><li>Stage and house sound for music and toasts</li></ul><p class="price">From $2,500</p><a class="btn" href="#book">Request a Quote</a></div>
-      <div class="pkg"><h3>Half-Day Party</h3><p class="for">Birthdays &amp; Reunions</p><ul><li>Five-hour evening block</li><li>Reception-style or seated layout</li><li>Tables and chairs included</li><li>House sound for music</li></ul><p class="price">From $1,200</p><a class="btn" href="#book">Request a Quote</a></div>
+      <div class="pkg"><h3>Full Celebration</h3><p class="for">Weddings &amp; Quinceañeras</p><ul><li>Full-day exclusive use of the hall</li><li>Ceremony set-up and reception flip</li><li>Tables and chairs included</li><li>Stage and house sound for toasts</li></ul><p class="price">From $2,500</p><a class="btn" href="#book">Request a Quote</a></div>
+      <div class="pkg"><h3>Stage Rental</h3><p class="for">Productions &amp; Performances</p><ul><li>Rehearsal and performance blocks</li><li>Stage lighting and house sound</li><li>Seating configuration for your house</li><li>Box-office friendly scheduling</li></ul><p class="price">From $1,800</p><a class="btn" href="#book">Request a Quote</a></div>
       <div class="pkg"><h3>Corporate Day</h3><p class="for">Meetings &amp; Banquets</p><ul><li>Business-hours block</li><li>Stage, projector and house sound</li><li>Buffet-friendly floor plan</li><li>Easy parking for the whole team</li></ul><p class="price">From $950</p><a class="btn" href="#book">Request a Quote</a></div>
     </div>
     <p class="demo-note">Sample packages and figures for demo purposes — finalized with the venue's real pricing at launch.</p>
@@ -153,11 +179,11 @@
 <section id="voices">
   <div class="wrap">
     <div class="kicker">Word of Mouth</div>
-    <h2 style="text-align:center">What hosts say.</h2>
+    <h2 style="text-align:center">What audiences &amp; hosts say.</h2>
     <div class="quote">
       <p class="stars">★★★★★</p>
-      <p>"The space was beautiful and the team made our day effortless. Our guests are still talking about it."</p>
-      <p class="demo-note" style="margin-top:10px">Real guest reviews load here at launch — pulled straight from your Google and Facebook five-star ratings.</p>
+      <p>"A real stage, a real show, five minutes from home. Our whole family came out for opening night."</p>
+      <p class="demo-note" style="margin-top:10px">Real audience and guest reviews load here at launch — pulled straight from your Google and Facebook five-star ratings.</p>
     </div>
   </div>
 </section>
@@ -167,10 +193,11 @@
     <div class="kicker" style="text-align:center">Good Questions, Plain Answers</div>
     <h2 style="text-align:center;margin-bottom:40px">Frequently asked.</h2>
     <div class="faq">
-      <details><summary>How far in advance should we book?</summary><p>Spring and fall Saturdays go first, often 8-12 months out. Off-season and weekday dates offer more flexibility and friendlier rates.</p></details>
+      <details><summary>How do we get tickets to a show?</summary><p>Call or text 214-699-9868 for showtimes, tickets and season information. Current productions are listed right on this page at launch.</p></details>
+      <details><summary>How do I audition for a production?</summary><p>The venue holds open auditions for local performers. Call to find out the next audition date and what to prepare.</p></details>
+      <details><summary>Can our theater group rent the stage?</summary><p>Yes. The Stage Rental package covers rehearsal and performance blocks with theatrical lighting, house sound and seating configuration.</p></details>
       <details><summary>Can we bring our own caterer?</summary><p>Yes. The kitchen area is ready for your caterer's team, and we'll coordinate access and timing with them directly.</p></details>
       <details><summary>Do you provide tables, chairs and set-up?</summary><p>Yes. Tables and chairs are included with every rental, and the floor plan is laid out with you before event day.</p></details>
-      <details><summary>What about music, microphones and presentations?</summary><p>The hall is A/V-ready with a stage and house sound for toasts, music and slideshows. Larger productions can bring in outside A/V.</p></details>
       <details><summary>Is there a deposit, and when is the balance due?</summary><p>A signed agreement and deposit reserve your date. The payment schedule is explained clearly up front — no surprises.</p></details>
     </div>
   </div>
@@ -178,9 +205,9 @@
 
 <section class="book" id="book">
   <div class="wrap">
-    <div class="kicker">Reserve Your Date</div>
-    <h2>Dates go fast. Let's save yours.</h2>
-    <p>Call or text today and we'll walk you through availability, pricing, and setup options for your event.</p>
+    <div class="kicker">The House Is Open</div>
+    <h2>Get tickets or save your date.</h2>
+    <p>Call or text today for showtimes, tickets, auditions, or availability for your own event.</p>
     <a class="phone" href="tel:+12146999868">214-699-9868</a>
     <div class="hint">4601 Gus Thomasson Rd · Mesquite, TX 75150</div>
   </div>
